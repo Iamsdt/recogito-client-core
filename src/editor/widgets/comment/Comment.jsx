@@ -33,13 +33,13 @@ const Comment = props => {
   const creatorInfo = props.body.creator && 
     <div className="r6o-lastmodified">
       <span className="r6o-lastmodified-by">{props.body.creator.name || props.body.creator.id}</span>
-      { props.body.created && 
-        <span className="r6o-lastmodified-at">
-          <TimeAgo 
-            datetime={props.env.toClientTime(timestamp)}
-            locale={i18n.locale()} />
-        </span> 
-      }
+      {/*{ props.body.created && */}
+      {/*  <span className="r6o-lastmodified-at">*/}
+      {/*    <TimeAgo */}
+      {/*      datetime={props.env.toClientTime(timestamp)}*/}
+      {/*      locale={i18n.locale()} />*/}
+      {/*  </span> */}
+      {/*}*/}
     </div>
   
   return props.readOnly ? (
@@ -65,18 +65,18 @@ const Comment = props => {
             onSaveAndClose={props.onSaveAndClose}
           /> } 
           
-      <div 
-        className={isMenuVisible ? "r6o-icon r6o-arrow-down r6o-menu-open" : "r6o-icon r6o-arrow-down"} 
-        onClick={() => setIsMenuVisible(!isMenuVisible)}>
-        <ChevronDownIcon width={12} />
-      </div>
+      {/*<div */}
+      {/*  className={isMenuVisible ? "r6o-icon r6o-arrow-down r6o-menu-open" : "r6o-icon r6o-arrow-down"} */}
+      {/*  onClick={() => setIsMenuVisible(!isMenuVisible)}>*/}
+      {/*  <ChevronDownIcon width={12} />*/}
+      {/*</div>*/}
 
-      { isMenuVisible && 
-        <DropdownMenu 
-          onEdit={onMakeEditable} 
-          onDelete={onDelete} 
-          onClickOutside={() => setIsMenuVisible(false)} /> 
-      }
+      {/*{ isMenuVisible && */}
+      {/*  <DropdownMenu */}
+      {/*    onEdit={onMakeEditable} */}
+      {/*    onDelete={onDelete} */}
+      {/*    onClickOutside={() => setIsMenuVisible(false)} /> */}
+      {/*}*/}
     </div>
   )
 

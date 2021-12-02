@@ -89,38 +89,38 @@ const CommentWidget = props => {
 
   return (
     <>
-      { comments.map((body, idx) => 
-        <Comment 
-          key={idx} 
+      { comments.map((body, idx) =>
+        <Comment
+          key={idx}
           env={props.env}
           purposeSelector={props.purposeSelector}
-          readOnly={isReadOnlyComment(body, props)} 
-          body={body} 
+          readOnly={isReadOnlyComment(body, props)}
+          body={body}
           onUpdate={props.onUpdateBody}
           onDelete={props.onRemoveBody}
           onSaveAndClose={props.onSaveAndClose} />
       )}
 
-      { !props.readOnly && props.annotation &&
-        <div className="r6o-widget comment editable">
-          <TextEntryField
-            focus={props.focus}
-            content={draftReply.value}
-            editable={true}
-            placeholder={comments.length > 0 ? i18n.t('Add a reply...') : i18n.t('Add a comment...')}
-            onChange={onEditReply}
-            onSaveAndClose={() => props.onSaveAndClose()}
-          /> 
-        { props.purposeSelector  && draftReply.value.length > 0 &&
-          <PurposeSelect
-              editable={true}
-              content={draftReply.purpose}
-              onChange={onChangeReplyPurpose} 
-              onSaveAndClose={() => props.onSaveAndClose()}
-            />
-          } 
-        </div>
-      }
+      {/*{ !props.readOnly && props.annotation &&*/}
+      {/*  <div className="r6o-widget comment editable">*/}
+      {/*    <TextEntryField*/}
+      {/*      focus={props.focus}*/}
+      {/*      content={draftReply.value}*/}
+      {/*      editable={true}*/}
+      {/*      placeholder={"Text"}*/}
+      {/*      onChange={onEditReply}*/}
+      {/*      onSaveAndClose={() => props.onSaveAndClose()}*/}
+      {/*    /> */}
+      {/*  { props.purposeSelector  && draftReply.value.length > 0 &&*/}
+      {/*    <PurposeSelect*/}
+      {/*        editable={true}*/}
+      {/*        content={draftReply.purpose}*/}
+      {/*        onChange={onChangeReplyPurpose} */}
+      {/*        onSaveAndClose={() => props.onSaveAndClose()}*/}
+      {/*      />*/}
+      {/*    } */}
+      {/*  </div>*/}
+      {/*}*/}
     </>
   )
 
