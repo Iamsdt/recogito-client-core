@@ -65,18 +65,18 @@ const Comment = props => {
             onSaveAndClose={props.onSaveAndClose}
           /> } 
           
-      {/*<div */}
-      {/*  className={isMenuVisible ? "r6o-icon r6o-arrow-down r6o-menu-open" : "r6o-icon r6o-arrow-down"} */}
-      {/*  onClick={() => setIsMenuVisible(!isMenuVisible)}>*/}
-      {/*  <ChevronDownIcon width={12} />*/}
-      {/*</div>*/}
+      <div
+        className={isMenuVisible ? "r6o-icon r6o-arrow-down r6o-menu-open" : "r6o-icon r6o-arrow-down"} 
+        onClick={() => setIsMenuVisible(!isMenuVisible)}>
+        <ChevronDownIcon width={12} />
+      </div>
 
-      {/*{ isMenuVisible && */}
-      {/*  <DropdownMenu */}
-      {/*    onEdit={onMakeEditable} */}
-      {/*    onDelete={onDelete} */}
-      {/*    onClickOutside={() => setIsMenuVisible(false)} /> */}
-      {/*}*/}
+      { isMenuVisible &&
+        <DropdownMenu
+          onEdit={onMakeEditable}
+          onDelete={onDelete}
+          onClickOutside={() => setIsMenuVisible(false)} />
+      }
     </div>
   )
 
